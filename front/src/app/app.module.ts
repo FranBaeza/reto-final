@@ -35,22 +35,13 @@ import {PartsModule} from './parts/parts.module';
 import {SpecialtiesModule} from './specialties/specialties.module';
 import {HttpErrorHandler} from './error.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { OfertasComponent } from './ofertas/ofertas.component';
-import { OfertasAddComponent } from './ofertas/ofertas-add/ofertas-add.component';
-import { OfertasDetailComponent } from './ofertas/ofertas-detail/ofertas-detail.component';
-import { OfertasEditComponent } from './ofertas/ofertas-edit/ofertas-edit.component';
-import { OfertasListComponent } from './ofertas/ofertas-list/ofertas-list.component';
+import { OfertasModule } from './ofertas/ofertas.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    OfertasComponent,
-    OfertasAddComponent,
-    OfertasDetailComponent,
-    OfertasEditComponent,
-    OfertasListComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +55,8 @@ import { OfertasListComponent } from './ofertas/ofertas-list/ofertas-list.compon
     SpecialtiesModule,
     PartsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OfertasModule
   ],
   providers: [
     HttpErrorHandler,
