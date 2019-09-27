@@ -19,38 +19,38 @@ export class OfertasService {
     this.handlerError = httpErrorHandler.createHandleError('OfertasService');
   }
 
-  getOwners(): Observable<Oferta[]> {
+  getOfertas(): Observable<Oferta[]> {
     return this.http.get<Oferta[]>(this.entity_url)
       .pipe(
-        catchError(this.handlerError('getOwners', []))
+        catchError(this.handlerError('getOfertas', []))
       );
   }
 
-  getOwnerById(owner_id: string): Observable<Oferta> {
-    return this.http.get<Oferta>(this.entity_url + '/' + owner_id)
+  getOfertaById(oferta_id: string): Observable<Oferta> {
+    return this.http.get<Oferta>(this.entity_url + '/' + oferta_id)
       .pipe(
-          catchError(this.handlerError('getOwnerById', {} as Oferta))
+          catchError(this.handlerError('getOfertaById', {} as Oferta))
       );
   }
 
-  addOwner(owner: Oferta): Observable<Oferta> {
-    return this.http.post<Oferta>(this.entity_url, owner)
+  addOferta(oferta: Oferta): Observable<Oferta> {
+    return this.http.post<Oferta>(this.entity_url, oferta)
       .pipe(
-        catchError(this.handlerError('addOwner', owner))
+        catchError(this.handlerError('addOferta', oferta))
       );
   }
 
-  updateOwner(owner_id: string, owner: Oferta): Observable<{}> {
-    return this.http.put<Oferta>(this.entity_url + '/' + owner_id, owner)
+  updateOferta(oferta_id: string, oferta: Oferta): Observable<{}> {
+    return this.http.put<Oferta>(this.entity_url + '/' + oferta_id, oferta)
       .pipe(
-        catchError(this.handlerError('updateOwner', owner))
+        catchError(this.handlerError('updateOferta', oferta))
       );
   }
 
-  deleteOwner(owner_id: string): Observable<{}> {
-    return this.http.delete<Oferta>(this.entity_url + '/' + owner_id)
+  deleteOferta(oferta_id: string): Observable<{}> {
+    return this.http.delete<Oferta>(this.entity_url + '/' + oferta_id)
       .pipe(
-         catchError(this.handlerError('deleteOwner', [owner_id]))
+         catchError(this.handlerError('deleteOferta', [oferta_id]))
       );
   }
 }

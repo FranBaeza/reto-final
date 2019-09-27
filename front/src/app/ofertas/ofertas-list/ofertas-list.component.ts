@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {OfertaService} from '../oferta.service';
+import {OfertasService} from '../ofertas.service';
 import {Oferta} from '../oferta';
 import 'rxjs/Rx';
 import {Router} from '@angular/router';
@@ -13,7 +13,7 @@ export class OfertasListComponent implements OnInit {
   errorMessage: string;
   ofertas: Oferta[];
 
-  constructor(private router: Router, private ofertaService: OfertaService) {
+  constructor(private router: Router, private ofertaService: OfertasService) {
   }
 
   ngOnInit() {
