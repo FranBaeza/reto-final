@@ -47,6 +47,7 @@ import { OfertasModule } from './ofertas/ofertas.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    OfertasModule,
     OwnersModule,
     PetsModule,
     VisitsModule,
@@ -55,8 +56,7 @@ import { OfertasModule } from './ofertas/ofertas.module';
     SpecialtiesModule,
     PartsModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    OfertasModule
+    AppRoutingModule
   ],
   providers: [
     HttpErrorHandler,

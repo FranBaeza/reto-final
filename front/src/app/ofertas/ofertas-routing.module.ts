@@ -10,7 +10,7 @@ const ofertasRoutes: Routes = [
   {path: 'ofertas', component: OfertasListComponent},
   {path: 'ofertas/add', component: OfertasAddComponent},
   {path: 'ofertas/:id', component: OfertaDetailComponent},
-  {path: 'ofertas/:id/edit', component: OfertasEditComponent},
+  {path: 'ofertas/:id/edit', component: OfertasEditComponent}
 ];
 
 @NgModule({
