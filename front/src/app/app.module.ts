@@ -38,6 +38,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { OfertasModule } from './ofertas/ofertas.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
