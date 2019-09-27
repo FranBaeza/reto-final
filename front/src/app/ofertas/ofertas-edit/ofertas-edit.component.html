@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
   ~ /*
   ~  * Copyright 2016-2017 the original author or authors.
@@ -83,3 +84,62 @@
     </div>
   </div>
   
+=======
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h2>
+      Edit Oferta
+    </h2>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{errorMessage}}
+    </div>
+    <form (ngSubmit)="onSubmit(ofertaForm.value)" #ofertaForm="ngForm" class="form-horizontal">
+      <div class="form-group" hidden="true">
+        <input type="text" hidden="true" class="form-control" id="id" [(ngModel)]="oferta.id" name="id"/>
+      </div>
+      <div class="form-group has-feedback" [class.has-success]="title.valid" [class.has-error]="!title.valid">
+        <label for="title" class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="title" [(ngModel)]="oferta.title" minlength="2" required name="title" #title="ngModel"/>
+          <span class="glyphicon form-control-feedback" [class.glyphicon-ok]="title.valid" [class.glyphicon-remove]="!title.valid" aria-hidden="true"></span>
+          <span class="help-block" *ngIf="title.dirty && title.hasError('required')">Title is required</span>
+          <span class="help-block" *ngIf="title.dirty && title.hasError('minlength')">Title must be at least 2 characters long</span>
+        </div>
+      </div>
+      <div class="form-group has-feedback" [class.has-success]="descripcion.valid" [class.has-error]="!descripcion.valid">
+        <label for="descripcion" class="col-sm-2 control-label">Descripcion</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="descripcion" [(ngModel)]="oferta.descripcion" name="descripcion" required #descripcion="ngModel"/>
+          <span class="glyphicon form-control-feedback" [class.glyphicon-ok]="descripcion.valid" [class.glyphicon-remove]="!descripcion.valid" aria-hidden="true"></span>
+          <span class="help-block" *ngIf="descripcion.dirty && descripcion.hasError('required')">Descripcion is required</span>
+        </div>
+      </div>
+      <div class="form-group has-feedback" [class.has-success]="discount.valid" [class.has-error]="!discount.valid">
+        <label for="discount" class="col-sm-2 control-label">Discount</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="discount" [(ngModel)]="oferta.discount" name="discount" pattern="^[0-9]{0,10}$" required #discount="ngModel"/>
+          <span class="glyphicon form-control-feedback" [class.glyphicon-ok]="discount.valid" [class.glyphicon-remove]="!discount.valid" aria-hidden="true"></span>
+          <span class="help-block" *ngIf="discount.dirty && discount.hasError('required')">Discount is required</span>
+          <span class="help-block" *ngIf="expiredate.dirty && expiredate.hasError('pattern')" >Discount only accept digits</span>
+        </div>
+      </div>
+      <div class="form-group has-feedback" [class.has-success]="expiredate.valid" [class.has-error]="!expiredate.valid">
+        <label for="expiredate" class="col-sm-2 control-label">Expire date</label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" id="expiredate" [(ngModel)]="oferta.expiredate" name="expiredate" pattern="^[0-9]{0,10}$" #expiredate="ngModel"/>
+          <span class="glyphicon form-control-feedback" [class.glyphicon-ok]="expiredate.valid" [class.glyphicon-remove]="!expiredate.valid" aria-hidden="true"></span>
+          <span class="help-block" *ngIf="expiredate.dirty && expiredate.hasError('required')">Expire date is required</span>
+          <span class="help-block" *ngIf="expiredate.dirty && expiredate.hasError('pattern')" >Expire date only accept digits</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button class="btn btn-default" (click)="gotoofertaDetail(oferta)">Back</button>
+          <button type="submit" [disabled]="!ofertaForm.valid" class="btn btn-default">Update oferta</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+>>>>>>> cc791c1db268666d52f59e3b099c20d557318aa3

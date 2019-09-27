@@ -21,42 +21,42 @@
  */
 
 import {Component, OnInit} from '@angular/core';
-import {OwnerService} from '../owner.service';
-import {Owner} from '../owner';
+import {OfertaService} from '../ofertas-add';
+import {Oferta} from '../ofertas';
 import {ActivatedRoute, Router} from '@angular/router';
 import 'rxjs/Rx';
 
 @Component({
-  selector: 'app-owner-edit',
-  templateUrl: './owner-edit.component.html',
-  styleUrls: ['./owner-edit.component.css']
+  selector: 'app-oferta-edit',
+  templateUrl: './oferta-edit.component.html',
+  styleUrls: ['./oferta-edit.component.css']
 })
-export class OwnerEditComponent implements OnInit {
-  owner: Owner;
+export class OfertaEditComponent implements OnInit {
+  oferta: Oferta;
   errorMessage: string; // server error message
 
-  constructor(private ownerService: OwnerService, private route: ActivatedRoute, private router: Router) {
-    this.owner = <Owner>{};
+  constructor(private ofertaService: OfertaService, private route: ActivatedRoute, private router: Router) {
+    this.oferta = <Oferta>{};
   }
 
   ngOnInit() {
-    const ownerId = this.route.snapshot.params['id'];
-    this.ownerService.getOwnerById(ownerId).subscribe(
-      owner => this.owner = owner,
+    const ofertaId = this.route.snapshot.params['id'];
+    this.ofertaService.getOfertaById(ofertaId).subscribe(
+      oferta => this.oferta = oferta,
       error => this.errorMessage = <any> error);
   }
 
-  onSubmit(owner: Owner) {
+  onSubmit(oferta: Oferta) {
     var that = this;
-    this.ownerService.updateOwner(owner.id.toString(), owner).subscribe(
-      res => this.gotoOwnerDetail(owner),
+    this.ofertaService.updateOferta(oferta.id.toString(), oferta).subscribe(
+      res => this.gotoOfertaDetail(oferta),
       error => this.errorMessage = <any> error
     )
   }
 
-  gotoOwnerDetail(owner: Owner) {
+  gotoOfertaDetail(oferta: Oferta) {
     this.errorMessage = null;
-    this.router.navigate(['/owners', owner.id]);
+    this.router.navigate(['/ofertas', oferta.id]);
   }
 
 
