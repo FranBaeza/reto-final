@@ -1,3 +1,42 @@
-<p>
-  ofertas-detail works!
-</p>
+
+<div class="container-fluid">
+  <div class="container xd-container">
+
+    <h2>Oferta Information</h2>
+
+
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <td><b>{{oferta.title}}</b></td>
+      </tr>
+      <tr>
+        <th>Descripcion</th>
+        <td>{{oferta.descripcion}}</td>
+      </tr>
+      <tr>
+        <th>Descuento</th>
+        <td>{{oferta.discount}}</td>
+      </tr>
+      <tr>
+        <th>Fin Oferta</th>
+        <td>{{oferta.expiredate}}</td>
+      </tr>
+    </table>
+
+    <button class="btn btn-default" (click)="gotoOfertasList()">< Back</button>
+    <button class="btn btn-default" (click)="editOferta()">Edit Oferta</button>
+    <button class="btn btn-default" (click)="addOferta(oferta)">Add New Oferta</button>
+
+    <br/>
+    <br/>
+    <br/>
+    <h2>Listado Ofertas</h2>
+
+    <table class="table table-striped">
+      <tr>
+        <app-ofertas-list *ngFor="let ofe of oferta"></app-ofertas-list>
+      </tr>
+    </table>
+  </div>
+</div>
