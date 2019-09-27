@@ -19,7 +19,8 @@ public class JpaOfertaRepositoryImpl implements OfertaRepository {
 	
 	@Override
 	public Oferta findById(int id) throws DataAccessException {
-		Query query = this.em.createQuery("SELECT o FROM ofertas WHERE o.id LIKE :id");
+		Query query = this.em.createQuery("SELECT o FROM ofertas WHERE o.id = :id");
+		query.setParameter("id", id);
         return (Oferta) query.getSingleResult();
 	}
 
