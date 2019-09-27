@@ -35,21 +35,22 @@ import {PartsModule} from './parts/parts.module';
 import {SpecialtiesModule} from './specialties/specialties.module';
 import {HttpErrorHandler} from './error.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { OfertaComponent } from './oferta/oferta.component';
-import { OfertaAddComponent } from './oferta/oferta-add/oferta-add.component';
-import { OfertaDetailComponent } from './oferta/oferta-detail/oferta-detail.component';
-import { OfertaEditComponent } from './oferta/oferta-edit/oferta-edit.component';
-import { OfertaListComponent } from './oferta/oferta-list/oferta-list.component';
+import { OfertasComponent } from './ofertas/ofertas.component';
+import { OfertasAddComponent } from './ofertas/ofertas-add/ofertas-add.component';
+import { OfertasDetailComponent } from './ofertas/ofertas-detail/ofertas-detail.component';
+import { OfertasEditComponent } from './ofertas/ofertas-edit/ofertas-edit.component';
+import { OfertasListComponent } from './ofertas/ofertas-list/ofertas-list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    OfertaComponent,
-    OfertaAddComponent,
-    OfertaDetailComponent,
-    OfertaEditComponent,
-    OfertaListComponent,
+    OfertasComponent,
+    OfertasAddComponent,
+    OfertasDetailComponent,
+    OfertasEditComponent,
+    OfertasListComponent,
   ],
   imports: [
     BrowserModule,
