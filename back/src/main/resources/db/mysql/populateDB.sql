@@ -57,3 +57,7 @@ INSERT IGNORE INTO users(username,password,enabled) VALUES ('admin','admin', tru
 INSERT IGNORE INTO roles (username, role) VALUES ('admin', 'ROLE_OWNER_ADMIN');
 INSERT IGNORE INTO roles (username, role) VALUES ('admin', 'ROLE_VET_ADMIN');
 INSERT IGNORE INTO roles (username, role) VALUES ('admin', 'ROLE_ADMIN');
+
+INSERT IGNORE INTO ofertas VALUES (1, 'oferta1', 'description1', 1, '2019-09-27');
+INSERT IGNORE INTO ofertas VALUES (2, 'oferta2', 'description2', 1.7, '2019-06-02');
+
