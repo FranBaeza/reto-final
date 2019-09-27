@@ -6,9 +6,9 @@ import 'rxjs/Rx';
 
 
 @Component({
-  selector: 'app-oferta-detail',
-  templateUrl: './oferta-detail.component.html',
-  styleUrls: ['./oferta-detail.component.css']
+  selector: 'app-ofertas-detail',
+  templateUrl: './ofertas-detail.component.html',
+  styleUrls: ['./ofertas-detail.component.css']
 })
 export class OfertaDetailComponent implements OnInit {
   errorMessage: string;

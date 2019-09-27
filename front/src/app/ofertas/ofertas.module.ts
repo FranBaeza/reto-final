@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OfertasRoutingModule } from './ofertas-routing.module';
 import { OfertasListComponent } from './ofertas-list/ofertas-list.component';
-import { OfertasDetailComponent } from './ofertas-detail/ofertas-detail.component';
+import { OfertaDetailComponent } from './ofertas-detail/ofertas-detail.component';
 import { OfertasEditComponent } from './ofertas-edit/ofertas-edit.component';
 import { OfertasAddComponent } from './ofertas-add/ofertas-add.component';
 import { OfertasService } from './ofertas.service';
@@ -16,7 +16,7 @@ import { OfertasService } from './ofertas.service';
   ],
   declarations: [
     OfertasListComponent,
-    OfertasDetailComponent,
+    OfertaDetailComponent,
     OfertasEditComponent,
     OfertasAddComponent
   ],

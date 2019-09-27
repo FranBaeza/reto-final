@@ -1,7 +1,7 @@
 
 
 import {Component, OnInit} from '@angular/core';
-import {OfertaService} from '../oferta.service';
+import {OfertasService} from '../ofertas.service';
 import {Oferta} from '../oferta';
 import {Router} from '@angular/router';
 
@@ -17,7 +17,7 @@ export class OfertasAddComponent implements OnInit {
   oferta: Oferta;
   errorMessage: string;
 
-  constructor(private ofertaService: OfertaService, private router: Router) {
+  constructor(private ofertaService: OfertasService, private router: Router) {
     this.oferta = <Oferta>{};
   }
 
